@@ -105,7 +105,7 @@ def reveal(_numBids: int128, _values: uint256[128], _fakes: bool[128], _secrets:
 
   # Check that number of bids being revealed matches log
   # for sender
-  assert _numBids = self.bidCounts[msg.sender]
+  assert _numBids == self.bidCounts[msg.sender]
 
   # Calculate refund for sender
   refund: uint256 = 0
